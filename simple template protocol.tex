@@ -1,0 +1,238 @@
+% simple template for protocols
+% created by Lena Meßner
+% last update: 14.06.2022
+
+
+% !TeX spellcheck = en_GB
+\documentclass[a4paper,12pt]{report}
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[greek, ngerman, main=english]{babel}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[hyphens]{url}
+\usepackage{listings}
+\usepackage{placeins}
+\usepackage{pdfpages}
+\usepackage{icomma}
+\usepackage{pdflscape}
+\usepackage{gensymb}
+\usepackage{cmll}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage[printonlyreused]{acronym}
+\usepackage{cell}
+\usepackage{array}
+\usepackage{varwidth}
+\usepackage{subcaption}  % statt subfig
+
+
+
+%\newcommand{\changefont}[3]{\fontfamily{#1}\fontseries{#2}\fontshape{#3}\selectfont} 
+%für andere Schriftart (unwichtig!)
+
+\titleformat{\chapter}
+[hang]
+{\Large}
+{\thechapter}
+{10pt}
+{\Large}
+[{\titlerule[0.3pt]}]
+
+
+\titlespacing*{\chapter}{0pt}{0pt}{15pt}[0pt] %{Einrücken}{Abstand oben}{Abstand unten}[Rand]
+
+
+\titleformat{\section}
+{\large}
+{\thesection}
+{5pt}
+{\large}
+
+\titlespacing*{\section}{0pt}{17pt}{8pt}[0pt]
+
+
+\DeclareCaptionStyle{Captions}{labelfont={small, bf}, textfont={small}, aboveskip=0.3cm, belowskip=0.5cm}
+\DeclareCaptionStyle{Ausnahme}{labelfont={small, bf}, textfont={small}, aboveskip=0.3cm, belowskip=0cm}
+
+\captionsetup{style=Captions}      %captions sind die Bildbeschriftungen!!
+
+
+\geometry{outer=25mm,
+	inner=25mm,
+	top=25mm,
+	bottom=25mm}
+
+\onehalfspacing
+
+\renewcommand{\arraystretch}{1.1}  % definiert vertikalen Abstand der Tabellenzeilen
+	
+
+\begin{document}
+\onehalfspacing
+\pagenumbering{roman}
+	
+\begin{titlepage}
+	\begin{flushleft}University of Heidelberg\\
+	 Faculty of Biosciences\\
+	 Molecular Biotechnology Bachelor Program\\
+	\end{flushleft}
+\vspace*{6.5cm}
+	\begin{center}
+		\huge AMPAR-TARP interaction\\ \bigskip
+    	\Large Lab Course II Bioinformatics\\ \smallskip
+    	\large 06.09.2021 - 24.09.2021
+    	\normalsize
+	\end{center}
+\vspace*{\fill}
+	\begin{flushright} 
+	\large Lena Meßner\\ \normalsize
+	matriculation number 1234567
+	\end{flushright}
+\end{titlepage}
+
+\renewcommand\abstractname{} % Abstract soll keinen Titel haben
+\begin{abstract}
+	
+\end{abstract}
+
+{\setlength{\parskip}{0.2cm}		% Kleinerer Zeilenabstand zwischen den Einträgen
+	%	Abkürzungsverzeichnis
+	\chapter*{List of Abbreviations}
+	\addcontentsline{toc}{chapter}{List of Abbreviations}
+	\begin{acronym}[ABCDEFGHIJK]	% Länge des Strings in den [..] entspricht dem Abstand der zwischen Acronym und Vollname gelassen wird
+		% => mindestens so lange wie das längste Acronym
+		% Abkürzungen
+		%\acro{acronym}{full name} -> hier werden die erstellt, im Text dann mit \ac{acronym} benutzen!
+		%list of abbreviation lists abbreviations in the order they are generated here!
+		\acro{TARP}{transmembrane AMPAR regulatroy protein}
+		\acro{AMPAR}{$\alpha$-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid receptor}
+		\acro{iGluR}{ionotropic glutamate receptor}
+		\acro{cryo-EM}{cryo-electron microscopy}
+		
+		
+		% Formelzeichen
+		%\acro{acronym}[$ Formelzeichen $]{full name}
+		
+		% als benutzt markierte Acronyme	
+		%\acused{acronym}
+		
+	\end{acronym}
+
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents}
+
+\newpage
+
+
+\onehalfspacing
+\pagenumbering{arabic}
+\chapter{Introduction}
+\blindtext
+
+
+
+
+
+\chapter{Materials and Methods}
+
+
+
+
+
+\chapter{Results}
+
+
+%\begin{figure}[h!]
+%	\centering
+%	\subfloat[Hellfeldfoto]{\includegraphics[height=3.55cm]{hellfeld.png}\label{hellfeld}}
+%	\qquad
+%	\subfloat[Fluoreszenzfoto]{\includegraphics[height=3.55cm]{fluoreszenz.png}\label{fluoreszenz}}
+%	\qquad
+%	\subfloat[Overlay]{\includegraphics[height=3.55cm]{overlay.png}\label{overlay}}
+%	\caption[Mikroskopie]{In dieser Abbildung sind die bei der Mikroskopie erhaltenen Bilder nebeneinandergestellt: Das Bild aus dem Lichtmikroskop (a), das Fluoreszenzmikroskopbild (b) sowie das Overlay aus beiden Bildern (c). \label{mikroskopie}}
+%\end{figure}
+
+
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width=1.0\textwidth]{kalibrierethanol.png}
+%	\caption[Kalibriergerade Ethanol]{Die Abbildung zeigt die aus den Messwerten erstellte Kalibriergerade: Die Ethanolkonzentration wurde gegen die gemessene Absorption aufgetragen und eine lineare Regressionsgerade wurde erstellt. \label{kalibrierethanol}}
+%\end{figure}
+
+
+\begin{equation*}
+	f(x) = 0,264x - 0,0057
+\end{equation*}
+
+\begin{table}[h!]
+	\centering
+	\caption [Reaktionsraten]{In dieser Tabelle sind die berechneten Reaktionsraten mit der zugehörigen Konzentration an G6P dargestellt.\label{TabelleReaktionsraten}}
+	
+	\begin{tabular}{lp{1.5cm}l}
+		\toprule
+		c(G6P) [mM]	& &	Reaktionsrate [mM NADPH/s]	\\
+		
+		\midrule
+		0	& &	(2,5 $\pm$ 0,7) $\cdot$ 10\textsuperscript{-5}	\\
+		0,125	& &	(8,1 $\pm$ 0,3) $\cdot$ 10\textsuperscript{-5}	\\
+		0,25	& &	(1,51 $\pm$ 0,18) $\cdot$ 10\textsuperscript{-4}	\\
+		0,5	& &	(1,93 $\pm$ 0,12) $\cdot$ 10\textsuperscript{-4}	\\
+		1	& &	(2,036 $\pm$ 0,003) $\cdot$ 10\textsuperscript{-4}	\\
+		2	& &	(2,16 $\pm$ 0,06) $\cdot$ 10\textsuperscript{-4}	\\
+		3	& &	(2,33 $\pm$ 0,07) $\cdot$ 10\textsuperscript{-4}	\\
+		5	& &	(2,27 $\pm$ 0,09) $\cdot$ 10\textsuperscript{-4}	\\
+		
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+\FloatBarrier
+
+
+
+		
+\begin{align*}
+f(x) &= 983,94x + 3796,8 = 0 \\
+x &= -3,858771876
+\end{align*}
+
+
+\chapter{Discussion}
+
+\appendix
+\setcounter{chapter}{18}
+\chapter{Supplemental Material}
+
+
+
+%Literaturverzeichnis
+\renewcommand{\bibname}{References}
+\bibliographystyle{cell}
+\bibliography{Literatur.bib}
+\addcontentsline{toc}{chapter}{References}
+
+%\titleformat{\chapter}
+%[hang]
+%{\Large}
+%{}
+%{0pt}
+%{\Large}
+%[{\titlerule[0.3pt]}]
+
+\end{document}
