@@ -1,0 +1,80 @@
+\documentclass[parskip]{scrartcl}
+
+\input{header}
+\usepackage{easyReview}
+
+
+% Title Page
+% Definitionen für die Titelseite
+% Change the content of the second bracket pair to what you need
+\newcommand{\workauthor}{}
+\newcommand{\worktitle}{}
+\newcommand{\studentid}{}
+\newcommand{\email}{}
+\newcommand{\workyear}{}
+\newcommand{\supervisor}{}
+
+\sisetup{
+        per-mode=fraction,
+        output-decimal-marker={,},
+        separate-uncertainty,
+        table-align-uncertainty=true
+        }
+\begin{document}
+
+\begin{titlepage}
+    % HIER NICHTS ÄNDERN SONDER BEI DEN DEFINITIONEN OBEN DRÜBER    
+    {\usekomafont{title}
+    {\vspace*{1cm}\Huge Unterüberschrift einsetzen}
+    
+    {\vspace{1cm}\Huge\worktitle{}}}
+    
+    \vspace{\stretch{2}}
+    
+    {\Large \workauthor{}}
+    
+    Matrikelnummer: \studentid{}
+    
+    E-Mail Adressen: \email{}
+    
+    \vspace{\stretch{6}}
+    
+    Essay Seminar für das \workyear{} Fachsemester
+    
+    Supervisor: \textbf{\supervisor{}}
+    
+    \vspace{\stretch{4}}
+    
+  
+    
+\end{titlepage}
+
+
+%    Abkürzungsverzeichnis
+{\setlength{\parskip}{0.2cm}
+\section*{Abbreviations}
+    \begin{acronym}[LC-MS/MS23]
+        % A B C D E F G H I J K L M N O P Q R S T U V W X Y Z        
+        % Abkürzungen
+        \acro{Amp}{Ampicillin}
+        % Formelzeichen
+        
+        
+        % als benutzt markierte Acronyme    
+        
+        
+    \end{acronym}
+}
+\tableofcontents
+\newpage
+Das ist ein Beispielsatz mit Zitation \citep{Alberts.2015}.
+
+\input{chapter/introduction}
+\input{chapter/mandm}
+\input{chapter/results}
+\input{chapter/discussion}
+
+\bibliography{bib/essay.bib}
+
+\end{document}
+

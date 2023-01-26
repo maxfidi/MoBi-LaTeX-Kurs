@@ -1,0 +1,87 @@
+% !TEX root='./Beispielprojekt.tex'
+
+% Sprachen
+\usepackage[LGR,T1]{fontenc}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+
+% Textstyle
+\sffamily
+\usepackage[margin=2.5cm]{geometry}
+
+% Bilder
+\usepackage{graphicx}
+
+% Informationen
+\author{\me}
+\date{\today}
+
+% Tabelle
+\usepackage{tabu}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{mathtools}
+
+% captions
+\usepackage[font=sf, format=plain, labelfont=bf]{caption} % Nicer captions with different font/typefaces
+
+% Mathematik
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{esint}
+\newcommand*{\QED}{\null\nobreak\hfill\ensuremath{\square}}
+
+% Equation numbering
+\numberwithin{equation}{section}
+
+% Biologie
+\usepackage{dnaseq} 	% Setzen von DNA und Proteinsequenzen
+
+% Chemie
+\usepackage{mhchem}
+\usepackage{siunitx}
+\sisetup{
+	per-mode=fraction,
+	output-decimal-marker={,},
+	separate-uncertainty,
+	table-align-uncertainty=true
+	}
+
+% Bilder
+\usepackage{graphicx}
+
+%references
+\usepackage[hidelinks]{hyperref}
+\usepackage[noabbrev]{cleveref}
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=MidnightBlue,
+	filecolor=MidnightBlue,
+	urlcolor=MidnightBlue
+}
+\usepackage{soul}
+\newcommand{\myul}[2][LimeGreen]{\setulcolor{#1}\ul{#2}\setulcolor{black}}
+
+% Blindtext
+\usepackage{blindtext}
+\usepackage{lipsum}
+
+% Kopf- und Fußzeile
+\usepackage{scrlayer-scrpage,lastpage}
+\setkomafont{pageheadfoot}{\normalsize \texttt}
+\lohead{\today}
+\rohead{\me}
+\cfoot*{\thepage{}/\pageref{LastPage}}
+\rofoot{\aufgabe}
+
+%Literatur
+\usepackage[style=alphabetic, backend=bibtex]{biblatex}
+\addbibresource{literatur.bib}
+\usepackage{csquotes}
+
+% Arbeiten mit PDF Dateien
+\usepackage{pdfpages}
