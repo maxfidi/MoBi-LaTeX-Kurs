@@ -1,5 +1,5 @@
 # LaTeX Kurs für MoBi-Studierende 
-**Anastasi Warken, Thien Bui und Maximilian Fidlin 28.01.2023**
+**Anastasia Warken, Thien Bui und Maximilian Fidlin 28.01.2023**
 
 Hier findet ihr alle nötigen Dokumente und Templates für den Anfänger LaTeX-Kurs. <br>
 Wir fangen an mit einer kleinen Präsentation, in der wir euch erklären, was LaTeX ist und wie es grob funktioniert. Wir werden besprechen:
