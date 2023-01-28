@@ -12,5 +12,6 @@
 	- Muss nichts großes sein, je lustiger Eure Methodik, desto besser.
 - Ergebnisse und Auswertung
 	- Fügt eine Tabelle Eurer Messwerte ein:
-| Messung Nr. | Länge | 
-- Diskussio
+	- Wir haben Euch eine Excel Tabelle mit allen Daten in der Heibox hochgeladen, Außerdem könnt Ihr die Daten dort im .txt Format kriegen.
+- Diskussion
+	Schreibt einfach was kurzes, das lustig ist. 
