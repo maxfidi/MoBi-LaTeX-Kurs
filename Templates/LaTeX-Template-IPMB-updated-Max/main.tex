@@ -7,12 +7,13 @@
 % Title Page
 % Definitionen für die Titelseite
 % Change the content of the second bracket pair to what you need
-\newcommand{\workauthor}{}
-\newcommand{\worktitle}{}
-\newcommand{\studentid}{}
-\newcommand{\email}{}
-\newcommand{\workyear}{}
-\newcommand{\supervisor}{}
+\newcommand{\workauthor}{some random dude}
+\newcommand{\worktitle}{Titel einsetzen}
+\newcommand{\studentid}{123456}
+\newcommand{\email}{hierKönnteIhreWerbung@stehen.de}
+\newcommand{\workyear}{35 b.c.}
+\newcommand{\shortabstract}{Ceterem censeo carthaginem esse delendam}
+\newcommand{\supervisor}{Cicero}
 
 \sisetup{
         per-mode=fraction,
@@ -25,31 +26,39 @@
 \begin{titlepage}
     % HIER NICHTS ÄNDERN SONDER BEI DEN DEFINITIONEN OBEN DRÜBER    
     {\usekomafont{title}
-    {\vspace*{1cm}\Huge Unterüberschrift einsetzen}
+    {\vspace*{1cm}\Huge \worktitle{}}}
     
-    {\vspace{1cm}\Huge\worktitle{}}}
     
     \vspace{\stretch{2}}
     
     {\Large \workauthor{}}
     
-    Matrikelnummer: \studentid{}
+    Student ID: \studentid{}
     
     E-Mail Adressen: \email{}
     
     \vspace{\stretch{6}}
     
-    Essay Seminar für das \workyear{} Fachsemester
+    Seminar Scientific Essay Writing and Presentations Skills Summer Term \workyear{}
     
     Supervisor: \textbf{\supervisor{}}
     
-    \vspace{\stretch{4}}
+    \vspace{\stretch{3}}
     
-  
+    \shortabstract{}
+    
+    \vspace{\stretch{3}}
+    
+    Based on the Article:\\
+    \bibentry{Seo2023} %% Hier den von Euch Articel ziteren.
+    
     
 \end{titlepage}
+\begin{abstract}
+	Das ist der Abstract, leider aber ohne Inhalt: Hier könnte Ihre Werbung stehen.
+\end{abstract}
 
-
+\tableofcontents
 %    Abkürzungsverzeichnis
 {\setlength{\parskip}{0.2cm}
 \section*{Abbreviations}
